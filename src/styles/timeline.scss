@@ -1,0 +1,89 @@
+#timeline {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: $color4;
+    top: -17px;
+
+    .timelineBox {
+        width: 100%;
+        height: 100%;
+        max-width: 1082px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 6px;
+            height: 100%;
+            position: absolute;
+            background: $color2;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timelineItem {
+            width: 50%;
+            position: relative;
+            top: 10px;
+            padding: 1rem 3rem;
+            color: $color3;
+
+            &::after {
+                content: "";
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                background: $color3;
+                border: 4px solid $black;
+                border-radius: 50%;
+                z-index: 1;
+                right: -15px;
+                top: 40px;
+            }
+
+            &:nth-child(odd) {
+                text-align: right;
+
+                &::after {
+                    animation: upAndDown 0.3s ease infinite alternate;
+                }
+            }
+
+            &:nth-child(even) {
+                text-align: left;
+
+                &::after {
+                    animation: upAndDown 0.5s ease infinite alternate;
+                }
+            }
+
+            >div {
+                padding: 10px 30px;
+                background-color: $color2_2;
+                color: $color3;
+                border-radius: 6px;
+            }
+        }
+
+        .leftTimline {
+            // position: relative;
+            left: 0;
+        }
+
+        .rightTimeline {
+            // position: relative;
+            left: 50%;
+
+            &:after {
+                left: -15px;
+            }
+        }
+    }
+
+}

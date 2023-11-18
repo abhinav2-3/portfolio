@@ -1,0 +1,84 @@
+#contact {
+    width: 100%;
+    height: 100vh;
+    margin-top: 3rem;
+
+    >section {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        >aside {
+
+            &:first-child {
+                width: 50%;
+                height: 100%;
+                margin-left: 2rem;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    font: 100 3rem $text2;
+                    text-align: center;
+                    border: none;
+                    letter-spacing: 5px;
+                }
+
+                >form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+
+                    input,
+                    textarea,
+                    button {
+                        padding: 0.8rem;
+                        width: 60%;
+                        outline: none;
+                        font: 400 0.9rem $text1;
+                        margin: 1rem;
+                        border: none;
+                        border-radius: 5px;
+                    }
+
+                    button {
+                        background: $color2_2;
+                        cursor: pointer;
+                        color: $color4;
+                        font: 500 1rem $text2;
+                        letter-spacing: 3px;
+                        margin: 3rem;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                background: $color2;
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                >img {
+                    width: 400px;
+                    height: 400px;
+                    object-fit: contain;
+                    border-radius: 50%;
+                    margin-top: 5rem;
+                    margin-left: 8rem;
+                    animation: upupdowndown 0.8s infinite linear alternate;
+                }
+            }
+        }
+    }
+}

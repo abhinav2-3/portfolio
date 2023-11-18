@@ -1,0 +1,134 @@
+nav {
+    margin: 0;
+    padding: 0;
+    padding: 0 $p;
+    width: 100%;
+    height: 100px;
+    background-color: $color4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    box-shadow: 0 0 0.7rem $color2;
+
+    >h1 {
+        display: none;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding-left: 1rem;
+        color: $color5;
+    }
+
+    >div {
+        gap: 2rem;
+        display: flex;
+
+
+
+        >a {
+            color: $color2_2;
+            font: 400 1.2rem $text2;
+            transition: all 0.27s;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $color5;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    >a>button {
+        border: 1px solid $color2_2;
+        background: transparent;
+        outline: none;
+        padding: 0.7rem 2.5rem;
+        transition: all 0.4s;
+        cursor: pointer;
+        font-weight: 400;
+        letter-spacing: 2px;
+
+        &:hover {
+            background-color: $black;
+            color: $color3;
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+.navBtn {
+    position: fixed;
+    background: $color3;
+    top: 2rem;
+    right: 2rem;
+    z-index: 150;
+    font-size: 1.8rem;
+    color: $color2;
+    display: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.navPhone {
+    transform: translateY(-300%);
+    transition: all 0.5s;
+    width: 100%;
+    height: 100vh;
+    background: $color2_2;
+    padding: $p_base;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        >a {
+            color: $color4;
+            letter-spacing: 1px;
+            font-weight: 500;
+            transition: all 0.5s;
+            font: 600 1.5rem $text1;
+            margin-bottom: 1rem;
+
+            &:hover {
+                color: $color3;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    >a>button {
+        padding: 0.7rem 2rem;
+        background-color: $color4;
+        cursor: pointer;
+        letter-spacing: 1px;
+        color: $color2;
+        font-weight: 500;
+        transition: 0.5s;
+        border: none;
+        margin-top: 3rem;
+
+        &:hover {
+            filter: invert(1);
+        }
+    }
+}
+
+.navPhoneComes {
+    transform: translateY(0%);
+}
